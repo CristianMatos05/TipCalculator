@@ -4,7 +4,6 @@
              x:Class="TipCalculator.Gui.MainPage"
              Title="CALCURADORA DE PROPINAS"
              
-             
              >
 
     <ScrollView>
@@ -46,6 +45,7 @@
                      />
 
                     <Entry 
+                      TextColor="Black"
                       Margin="10"
                       Grid.Column="1"
                       Background="LightGray"
@@ -65,6 +65,7 @@
                      />
                     
                     <Entry 
+                        TextColor="Black"
                       Grid.Column="1"
                       Margin="10"
                       Grid.Row="1"   
@@ -83,6 +84,7 @@
                      />
 
                     <Entry 
+                        TextColor="Black"
                       Grid.Column="1"
                       Margin="10"
                       Grid.Row="2"   
@@ -159,6 +161,8 @@
                      Text="$456789"   
                       FontSize="Small"
                         FontAttributes="Bold"
+                        x:Name="IMPORTEPROPINATOTALLABEL"
+                        
               
                      />
 
@@ -175,6 +179,7 @@
                      Text="$456789"  
                         FontSize="Small"
                         FontAttributes="Bold"
+                        x:Name="PROPINAPORPERSONALABEL"
                      />
 
                      <Label
@@ -191,7 +196,8 @@
                      FontSize="Small"
                      Text="$456789"   
                      FontAttributes="Bold"
-                     x:Name="IMPORTETOALLABEL"
+                     x:Name="IMPORTETOLALABEL"
+                        
                      />
 
                     <Label
@@ -216,7 +222,6 @@
 
                 </Grid>
    
-
 
             </Border>
 
