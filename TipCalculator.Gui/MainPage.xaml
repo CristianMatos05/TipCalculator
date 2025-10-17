@@ -2,17 +2,226 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TipCalculator.Gui.MainPage"
-             Title:"Calculadora para propinas"
+             Title="CALCURADORA DE PROPINAS"
              
              
              >
 
     <ScrollView>
-        
-        
-        
-        
-        
+
+        <VerticalStackLayout
+         Spacing="32"
+         Margin="10"
+         >
+
+            <Border
+                Margin="10"
+               >
+                <Grid
+                 ColumnSpacing="10"
+                 RowSpacing="2">
+
+                    <Grid.RowDefinitions>
+
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+
+
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                     Margin="10"
+                     Text="Importe del consumo"
+                     FontSize="Medium"
+                     TextColor="White"   
+                     />
+
+                    <Entry 
+                      Margin="10"
+                      Grid.Column="1"
+                      Background="LightGray"
+                      x:Name="IMPORTEDELCONSUMOENTRY"
+  
+                     />
+
+                    <Label
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                     Grid.Row="1"
+                     Margin="10"
+                     Text="Numero de personas"
+                     FontSize="Medium"
+                     TextColor="White"
+                     
+                     />
+                    
+                    <Entry 
+                      Grid.Column="1"
+                      Margin="10"
+                      Grid.Row="1"   
+                      Background="LightGray"    
+                       x:Name="NUMERODEPERSONASENTRY"
+                     />
+
+                    <Label
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                     Grid.Row="2"
+                     Margin="10"
+                     Text="% de propina" 
+                     FontSize="Medium"
+                     TextColor="White"   
+                     />
+
+                    <Entry 
+                      Grid.Column="1"
+                      Margin="10"
+                      Grid.Row="2"   
+                      Background="LightGray"
+                        x:Name="PORCENTAJEDEPROPINA"
+                     />
+                    
+                </Grid>
+
+            </Border>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="40">
+                
+                
+                <Button
+             
+                    Text="Calcular"
+                    FontSize="Medium"
+                    TextColor="White"
+                    Clicked="ButtonCALCULAR"
+
+                    />
+
+                <Button
+             
+                    Text="Limpiar"
+                    FontSize="Medium"
+                    TextColor="White"
+                    Clicked="ButtonLIMPIAR"
+
+                    />
+
+            </HorizontalStackLayout>
+
+            <Border
+                Padding="16"
+              >
+
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10" />
+                </Border.StrokeShape>
+
+                <Grid
+                        RowSpacing="10"
+                        Margin="10">
+                    <Grid.RowDefinitions>
+
+                      <RowDefinition Height="Auto"/>
+                      <RowDefinition Height="Auto"/>
+                      <RowDefinition Height="Auto"/>
+                       <RowDefinition Height="Auto"/>
+
+
+                    </Grid.RowDefinitions>
+                    
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        
+                     Text="Importe de la propina"   
+                     FontSize="Small"
+              
+                     />
+
+                    <Label
+                     HorizontalOptions="End"
+                     Grid.Column="1"
+                     Text="$456789"   
+                      FontSize="Small"
+                        FontAttributes="Bold"
+              
+                     />
+
+                    <Label
+                     Grid.Row="1"
+                     Text="Porpina por persona"   
+                        FontSize="Small"
+                     />
+
+                    <Label
+                     HorizontalOptions="End"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     Text="$456789"  
+                        FontSize="Small"
+                        FontAttributes="Bold"
+                     />
+
+                     <Label
+                         
+                      Grid.Row="2"
+                      Text="Importe Total:" 
+                         FontSize="Small"
+                       />
+
+                    <Label
+                     HorizontalOptions="End"
+                     Grid.Row="2"
+                     Grid.Column="1"
+                     FontSize="Small"
+                     Text="$456789"   
+                     FontAttributes="Bold"
+                     x:Name="IMPORTETOALLABEL"
+                     />
+
+                    <Label
+                         
+                      Grid.Row="3"
+                      Text="Importe Total por Persona:"   
+                      FontSize="Small"
+                       />
+
+                    <Label
+                     HorizontalOptions="End"
+                     Grid.Row="3"
+                     Grid.Column="1"
+                     Text="$456789" 
+                     FontSize="Small"
+                     FontAttributes="Bold"
+                     x:Name="IMPORTETOTALPORPERSONALABEL"
+                     
+                     />
+
+
+
+                </Grid>
+   
+
+
+            </Border>
+
+        </VerticalStackLayout>
+
     </ScrollView>
 
 </ContentPage>
